@@ -68,7 +68,6 @@ class Car_Listing_Core {
     require_once(plugin_dir_path(__FILE__) . 'thumbnails.php');
     require_once(plugin_dir_path(__FILE__) . 'widget-listing.php');
     require_once(plugin_dir_path(__FILE__) . 'car-listings-handler-sc.php');
-    require_once(plugin_dir_path(__FILE__) . 'class-car-listing-rest-controller.php');
 
       // ... load other dependencies ...
   }
@@ -88,7 +87,6 @@ class Car_Listing_Core {
       new ListingSettings();
       new Thumbnails();
       new CarListingsShortcode();
-      new Car_Listing_REST_Controller();
 
       add_action('widgets_init', function() {
         register_widget('Car_Listing_Widget');

@@ -3,10 +3,21 @@
 
 class CarListingsShortcode {
 
+  /**
+   * Constructor: Hooks into WordPress to register the 'car_listings' shortcode.
+   */
   public function __construct() {
       add_shortcode('car_listings', [$this, 'render_car_listings_shortcode']);
   }
 
+  /**
+   * Renders the 'car_listings' shortcode.
+   * This method gets the attributes provided with the shortcode, fetches the car listings based on those attributes, 
+   * and then returns the generated HTML for those listings.
+   *
+   * @param array $atts - The attributes provided with the shortcode.
+   * @return string - The generated HTML for the listings.
+   */
   public function render_car_listings_shortcode($atts) {
       $attributes = shortcode_atts(
           array(
@@ -20,7 +31,14 @@ class CarListingsShortcode {
       $listings = $this->fetch_car_listings($attributes);
       return $this->generate_listings_html($listings);
   }
-
+  /**
+   * Fetches car listings based on provided criteria.
+   * It constructs a WP_Query with appropriate arguments based on provided brand and type,
+   * and returns an array of fetched listings.
+   *
+   * @param array $args - Criteria for fetching the listings (like brand, type).
+   * @return array - Array of fetched listings.
+   */
     protected function fetch_car_listings($args) {
       $query_args = [
           'post_type' => 'car_listing',  // Assuming this is your custom post type
@@ -67,7 +85,13 @@ class CarListingsShortcode {
       return $listings;
   }
 
-
+  /**
+   * Generates the HTML to display fetched car listings.
+   * It constructs a series of div elements for each listing, taking care of using a default image if one isn't set.
+   *
+   * @param array $listings - Array of fetched car listings.
+   * @return string - The generated HTML for displaying the listings.
+   */
   protected function generate_listings_html($listings) {
       $html = "<div class='car-listings-container'>";
 
