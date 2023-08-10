@@ -48,15 +48,24 @@ This plugin provides the functionality to list cars on your WordPress website. U
    - Fill in the car details such as title, description, featured image, and custom fields.
    - Publish your listing.
 
-3. **Displaying Car Listings**:
+3. **Using Shortcodes**:
+
+   - Use the shortcode `[car_listings]` to display car listings in any post or page.
+   - For specific listings, use the shortcode with the ID attribute, e.g., `[car_listings id="123"]`.
+
+4. **Displaying Car Listings**:
 
    - The plugin provides a widget named "Car Listing Widget" with custom settings.
    - Add this widget to any sidebar or widgetized area to showcase the latest car listings.
    - The custom archive index listing and custom single page templates can be found in the `templates/` directory.
 
-4. **Plugin Settings**:
+5. **Plugin Settings**:
+
    - Go to `Dashboard > Car Listing Settings` to configure default settings.
    - Here, you can set a default car listing image and other global settings.
+
+6. **API Integration**:
+   - The plugin is API ready, allowing developers to fetch or send data to external systems. Check the documentation for API endpoints and usage guidelines.
 
 ## Notes
 
