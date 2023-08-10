@@ -13,23 +13,25 @@ This plugin provides the functionality to list cars on your WordPress website. U
 ├── README.md
 ├── car-listing.php
 ├── images
-│ ├── carplaceholder.png
-│ └── placeholder_50.png
+│   ├── carplaceholder.png
+│   ├── placeholder_50.png
+│   └── screenshot_1.png
 └── inc
-├── brand-taxonomy.php
-├── car-listings-handler-sc.php
-├── class-car-listing-core.php
-├── class-car-listing-rest-controller.php
-├── listing-setting.php
-├── meta-boxes.php
-├── plugin-activation.php
-├── post-types.php
-├── template
-│ ├── archive-car_listing.php
-│ └── single-car_listing.php
-├── thumbnails.php
-├── type-taxonomy.php
-└── widget-listing.php
+    ├── brand-taxonomy.php
+    ├── car-listings-handler-sc.php
+    ├── class-car-listing-core.php
+    ├── css
+    │   └── car-listing-styles.css
+    ├── listing-setting.php
+    ├── meta-boxes.php
+    ├── plugin-activation.php
+    ├── post-types.php
+    ├── template
+    │   ├── archive-car_listing.php
+    │   └── single-car_listing.php
+    ├── thumbnails.php
+    ├── type-taxonomy.php
+    └── widget-listing.php
 ```
 
 ## How to Use the Plugin
